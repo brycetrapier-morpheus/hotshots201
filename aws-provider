@@ -1,0 +1,23 @@
+#Declare the AWS Provider, and load variables from the Terraform Profile
+#
+provider "aws" {
+  # region = "us-west-1"
+   region = var.region
+   access_key = var.access_key
+   secret_key = var.secret_key
+}
+
+variable "access_key" {
+# This must be named 'access_key'
+  type = string
+}
+
+variable "secret_key" {
+# This must be named 'secret_key'
+  type = string
+}
+
+variable "region" {
+# This must be named 'region'
+  type = string
+}
